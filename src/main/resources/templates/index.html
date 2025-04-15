@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Stock Averages</title>
+</head>
+<body>
+<h1>Latest Stock Averages</h1>
+<table border="1">
+    <thead>
+    <tr>
+        <th>Symbol</th>
+        <th>Average</th>
+        <th>Window Time</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="avg : ${averages}">
+        <td th:text="${avg.symbol}"></td>
+        <td th:text="${avg.average}"></td>
+        <td th:text="${avg.windowTime}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

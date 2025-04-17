@@ -9,8 +9,9 @@ import java.util.Random;
 public class KafkaProducerStockPrices {
         public static void main(String[] args) throws Exception{
             Properties props = new Properties();
-            props.put("bootstrap.servers", "localhost:9092");
-//            props.put("bootstrap.servers", "34.78.158.172:9092");
+            //props.put("bootstrap.servers", "localhost:9092");
+           // props.put("bootstrap.servers", "34.78.158.172:9092");
+            props.put("bootstrap.servers", "34.56.254.8:9092");
              props.put("acks", "all"); // Options: "0", "1", or "all"
             props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
             props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");

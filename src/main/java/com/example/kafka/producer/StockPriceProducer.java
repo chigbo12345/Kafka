@@ -28,7 +28,11 @@ public class StockPriceProducer {
         stockPrice.setSymbol(symbol);
         stockPrice.setPrice(price);
 
+
+
         kafkaTemplate.send("stock-prices", symbol, objectMapper.writeValueAsString(stockPrice));
+        System.out.println("Sent: " + price);
+        System.out.println("Sent: " + symbol);
     }
 
 }
